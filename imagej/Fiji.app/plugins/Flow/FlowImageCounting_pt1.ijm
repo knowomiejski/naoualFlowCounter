@@ -1,0 +1,12 @@
+run("Subtract Background...", "rolling=20 light");
+//run("Brightness/Contrast...");
+run("Enhance Contrast", "saturated=0.35");
+run("Gaussian Blur...", "sigma=1");
+setAutoThreshold("Default");
+//run("Threshold...");
+setAutoThreshold("Default");
+//setThreshold(0, 251);
+setOption("BlackBackground", false);
+run("Convert to Mask");
+run("Fill Holes");
+run("Watershed");
